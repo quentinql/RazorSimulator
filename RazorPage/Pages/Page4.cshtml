@@ -1,0 +1,58 @@
+@page
+@model RazorPage.Pages.Page4Model
+
+@{
+    ViewData["Title"] = "Page4";
+}
+
+<h1>Page4</h1>
+
+<h4>User</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="User.Id" />
+            <ul>
+                <li>
+                    <input type="radio" asp-for="DurationKnown" value=true id="DurationKnown"/>
+                    <label for="DurationKnown">Je connais la durée</label>
+                    <div class="form-group">
+                        <label asp-for="User.MonthDuration" class="control-label">/Mois</label>
+                        <input asp-for="User.MonthDuration" class="form-control" value="1"/>
+                        <span asp-validation-for="User.MonthDuration" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.DayByMonthDuration" class="control-label">Jours/Mois</label>
+                        <input asp-for="User.DayByMonthDuration" class="form-control" value="20"/>
+                        <span asp-validation-for="User.DayByMonthDuration" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="User.MonthDuration" class="control-label">Moins d'un mois</label>
+                        <input type="checkbox" asp-for="DurationLowerOneMonth" class="form-control"/>
+                        <span asp-validation-for="DurationLowerOneMonth" class="text-danger"></span>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" asp-for="DurationKnown" value=false id="DurationUnknown"/>
+                    <label for="DurationUnknown">Je ne connais pas la durée</label>
+                    <p>La simulation sera effectuée sur la base d'un mois</p>
+                </li>
+            </ul>
+
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,99 @@
+@page
+@model RazorPage.Pages.Page6Model
+
+@{
+    ViewData["Title"] = "Votre Simulation";
+}
+
+<h1>Recevez votre simulation par email</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            CA Brut Total
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.CA)
+        </dd>
+        <dt class="col-sm-2">
+            Couts de gestion
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.ManagementCosts)
+        </dd>
+        <dt class="col-sm-2">
+            Disponible Consultant
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.Consultant)
+        </dd>
+        <dt class="col-sm-2">
+            Notes de frais
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.ExpenseReport)
+        </dd>
+        <dt class="col-sm-2">
+            Interessement
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.Interessement)
+        </dd>
+        <dt class="col-sm-2">
+            Montant chargé
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.ChargedAmount)
+        </dd>
+        <dt class="col-sm-2">
+            Cotisations patronales
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.EmployersContribution)
+        </dd>
+        <dt class="col-sm-2">
+            Montant brut généré
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.BrutGenerated)
+        </dd>
+        <dt class="col-sm-2">
+            Cotisations salariales
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.EmployeeContributions)
+        </dd>
+        <dt class="col-sm-2">
+            Net imposable
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.NetTaxable)
+        </dd>
+        <dt class="col-sm-2">
+            Net avant impot + frais
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.NetBeforeTax)
+        </dd>
+        <dt class="col-sm-2">
+            Net généré
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.NetGenerated)
+        </dd>
+        <dt class="col-sm-2">
+            taux d'imposition'
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.TaxRate)
+        </dd>
+        <dt class="col-sm-2">
+            Restitution après impots
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Simulator.RestitutionAfterTax)
+        </dd>
+    </dl>
+</div>

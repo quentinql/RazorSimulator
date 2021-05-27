@@ -1,0 +1,38 @@
+@page
+@model RazorPage.Pages.Page3Model
+
+@{
+    ViewData["Title"] = "Rémunération souhaitée";
+}
+
+<h1>Votre prétention salariale nous permettra de calculer vos honoraires à négocier Hors Taxes</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="User.Id" />
+            <div class="form-group">
+                <label asp-for="User.NetSalary" class="control-label">Rémunération nette (@Model.User.PriceUnit)</label>
+                <input asp-for="User.NetSalary" class="form-control" />
+                <span asp-validation-for="User.NetSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User.BrutSalary" class="control-label">Rémunération Brute (@Model.User.PriceUnit)</label>
+                <input asp-for="User.BrutSalary" class="form-control" />
+                <span asp-validation-for="User.BrutSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

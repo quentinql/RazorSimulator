@@ -1,0 +1,109 @@
+@page
+@model RazorPage.Pages.PageEndModel
+
+@{
+    ViewData["Title"] = "PageEnd";
+}
+
+<h1>PageEnd</h1>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.ResidenceCountry)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.ResidenceCountry)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.WorkCountry)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.WorkCountry)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.PriceType)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.PriceType)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.PriceUnit)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.PriceUnit)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.NetSalary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.NetSalary)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.BrutSalary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.BrutSalary)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.MonthDuration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.MonthDuration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.DayByMonthDuration)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.DayByMonthDuration)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Civility)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Civility)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Lastname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Lastname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Firstname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Firstname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.Telephone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.Telephone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.ConfidentialityPoliticAccepted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.ConfidentialityPoliticAccepted)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.User.MarketingOfferAccepted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.User.MarketingOfferAccepted)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.User.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

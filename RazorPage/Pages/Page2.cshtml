@@ -1,0 +1,36 @@
+@page
+@model RazorPage.Pages.Page2Model
+
+@{
+    ViewData["Title"] = "Tarif de prestation";
+}
+
+<h1>Ce sont vos honoraires pratiqués pour vos clients, hors TVAet hors frais refaxturés à votre client</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <ul>
+              @for (var i = 0; i < Model.PriceTypes.Count; i++){
+                <li>
+
+                    <input type="radio" asp-for="User.PriceType" id="@Model.PriceTypes[i].Value" value="@Model.PriceTypes[i].Value"/>
+                    <label for="@Model.PriceTypes[i].Value">@Model.PriceTypes[i].Text</label>
+                </li>
+                }
+            </ul>
+            <div class="form">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
